@@ -146,6 +146,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/parts/privapp-permissions-parts.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-parts.xml
 
+# Codec2
+PRODUCT_PACKAGES += \
+    libcodec2_vndk.vendor \
+    libcodec2_hidl@1.0.vendor
+
 # Display
 PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
@@ -293,7 +298,6 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    libcodec2_hidl@1.0.vendor \
     libmm-omxcore \
     libOmxAacEnc \
     libOmxAmrEnc \
