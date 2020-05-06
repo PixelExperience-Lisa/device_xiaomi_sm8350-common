@@ -1,2 +1,3 @@
 # Adress Iorapd denial
 allow init iorapd_data_file:file getattr;
+allow init adsprpcd_file:file mounton;
