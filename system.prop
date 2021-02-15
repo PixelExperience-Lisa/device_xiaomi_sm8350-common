@@ -3,7 +3,7 @@ persist.vendor.btstack.enable.lpa=true
 vendor.bluetooth.soc=hastings
 
 # Camera
-vendor.camera.aux.packagelist=com.android.camera
+vendor.camera.aux.packagelist=com.android.camera,org.pixelexperience.faceunlock
 
 # Charger
 ro.charger.enable_suspend=true
