@@ -23,8 +23,9 @@ persist.dbg.wfc_avail_ovr=1
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
 iorapd.perfetto.enable=true
 
-# LMK
+# LMKD
 ro.config.low_ram=false
+ro.lmk.log_stats=true
 
 # Media
 media.aac_51_output_enabled=true
