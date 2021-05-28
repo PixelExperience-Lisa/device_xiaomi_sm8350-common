@@ -18,6 +18,7 @@ persist.dbg.wfc_avail_ovr=1
 
 # IORap
 persist.device_config.runtime_native_boot.iorap_readahead_enable=true
+iorapd.perfetto.enable=true
 
 # Media
 media.aac_51_output_enabled=true
