@@ -4,6 +4,7 @@ vendor.bluetooth.soc=hastings
 
 # Bluetooth
 persist.vendor.btstack.enable.twsplus=true
+persist.vendor.bt.a2dp.hal.implementation=true
 
 # Camera
 persist.vendor.camera.expose.aux=1
