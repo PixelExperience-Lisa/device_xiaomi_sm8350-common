@@ -153,10 +153,9 @@ ro.frp.pst=/dev/block/bootdevice/by-name/frp
 vendor.gatekeeper.disable_spu=true
 
 # Graphics
-debug.hwui.renderer=skiagl
+debug.hwui.renderer=opengl
 debug.egl.hw=1
 debug.mdpcomp.logs=0
-debug.renderengine.backend=skiaglthreaded
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
