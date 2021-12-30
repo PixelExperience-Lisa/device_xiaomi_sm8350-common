@@ -301,7 +301,11 @@ PRODUCT_PACKAGES += \
     libOmxEvrcEnc \
     libOmxG711Enc \
     libOmxQcelp13Enc \
-    libstagefrighthw
+    libstagefrighthw \
+    libstagefright_omx \
+    libstagefright_foundation \
+    libOmxVdec \
+    libOmxVenc
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/media/init.qti.media.sh:$(TARGET_COPY_OUT_VENDOR)/bin/init.qti.media.sh \
