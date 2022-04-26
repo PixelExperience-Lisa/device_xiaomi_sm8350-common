@@ -153,7 +153,9 @@ vendor.gatekeeper.disable_spu=true
 
 # Graphics
 debug.egl.hw=0
+debug.hwui.renderer=skiagl
 debug.mdpcomp.logs=0
+debug.renderengine.backend=skiaglthreaded
 debug.sf.disable_client_composition_cache=1
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
@@ -167,6 +169,7 @@ debug.sf.set_idle_timer_ms=3000
 persist.sys.sf.color_mode=9
 persist.sys.sf.color_saturation=1.0
 persist.sys.sf.native_mode=2
+renderthread.skia.reduceopstasksplitting=true
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 ro.opengles.version=196610
