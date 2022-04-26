@@ -342,7 +342,11 @@ PRODUCT_PACKAGES += \
 # Minijail
 PRODUCT_PACKAGES += \
     libavservices_minijail \
-    libavservices_minijail.vendor
+    libavservices_minijail.vendor \
+    libcodec2_hidl@1.1.vendor \
+    libavservices_minijail_vendor \
+    libcodec2_soft_common.vendor \
+    libsfplugin_ccodec_utils.vendor
 
 # Network
 PRODUCT_COPY_FILES += \
