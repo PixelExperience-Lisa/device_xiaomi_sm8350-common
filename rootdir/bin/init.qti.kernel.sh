@@ -1,5 +1,6 @@
+#! /vendor/bin/sh
 #=============================================================================
-# Copyright (c) 2019-2021 Qualcomm Technologies, Inc.
+# Copyright (c) 2019-2020 Qualcomm Technologies, Inc.
 # All Rights Reserved.
 # Confidential and Proprietary - Qualcomm Technologies, Inc.
 #
@@ -30,27 +31,26 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #=============================================================================
 
-if [[ "$(getprop vendor.post_boot.custom)" == "true" ]]; then
-  echo "Device overrides post_boot, skipping $0"
-  exit 0
-fi
+verify_pasr_support()
+{
+	ddr_type=`od -An -tx /proc/device-tree/memory/ddr_device_type`
+	ddr_type5="08"
 
-if [ -f /sys/devices/soc0/soc_id ]; then
-	platformid=`cat /sys/devices/soc0/soc_id`
-fi
+         if [ -d /sys/kernel/mem-offline ]; then
+		#only LPDDR5 supports PAAR
+		if [ ${ddr_type:4:2} != $ddr_type5 ]; then
+			setprop vendor.pasr.activemode.enabled false
+		fi
 
-case "$platformid" in
-    "415"|"439"|"456"|"501"|"502")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-lahaina.sh
-	;;
+                setprop vendor.pasr.enabled true
+         fi
+}
 
-    "450")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-shima.sh
-	;;
-    "475"|"499"|"487"|"488"|"498"|"497"|"515")
-	/vendor/bin/sh /vendor/bin/init.kernel.post_boot-yupik.sh
-	;;
-     *)
-	echo "***WARNING***: Invalid SoC ID\n\t No postboot settings applied!!\n"
-	;;
-esac
+start_msm_irqbalance()
+{
+         if [ -f /vendor/bin/msm_irqbalance ]; then
+                start vendor.msm_irqbalance
+         fi
+}
+start_msm_irqbalance
+verify_pasr_support
