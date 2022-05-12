@@ -10,3 +10,4 @@ allow hal_camera_default public_adsprpcd_file:file r_file_perms;
 type vendor_hal_cameraperf_hwservice, hwservice_manager_type;
 
 add_hwservice(hal_camera_default, vendor_hal_cameraperf_hwservice)
+add_hwservice(hal_camera_default, hal_camerapostproc_xiaomi_hwservice)
