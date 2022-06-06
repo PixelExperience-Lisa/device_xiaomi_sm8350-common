@@ -264,3 +264,5 @@ wifi.aware.interface=wifi-aware0
 
 # Zygote
 zygote.critical_window.minute=10
+
+persist.vendor.console.silent.config=1 
