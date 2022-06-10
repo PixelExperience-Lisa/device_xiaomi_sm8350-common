@@ -110,6 +110,7 @@ BOARD_KERNEL_CMDLINE += swiotlb=0
 BOARD_KERNEL_CMDLINE += pcie_ports=compat
 BOARD_KERNEL_CMDLINE += iptable_raw.raw_before_defrag=1
 BOARD_KERNEL_CMDLINE += ip6table_raw.raw_before_defrag=1
+BOARD_KERNEL_CMDLINE += kpti=off
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Partitions
