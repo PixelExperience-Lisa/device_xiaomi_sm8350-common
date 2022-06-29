@@ -76,7 +76,9 @@ PRODUCT_COPY_FILES += \
 
 # Art
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat64.enabled=true
+    dalvik.vm.dex2oat64.enabled=true \
+    dalvik.vm.minidebuginfo=false \
+    dalvik.vm.dex2oat-minidebuginfo=false
 
 # A/B
 AB_OTA_POSTINSTALL_CONFIG += \
