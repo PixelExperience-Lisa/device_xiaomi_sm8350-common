@@ -80,13 +80,16 @@ static struct effect_stream effects[] = {
 
 // Array containing the paths to fifo data in vendor.
 // The position in the array must match the effect id.
+// 0_click_P_RTP.bin = STRONG
+// 3_thud_P_RTP.bin = SOFT
+// 4_pop_P_RTP.bin = MILD
 static const std::string fifo_data_paths[] = {
+    "/vendor/firmware/4_pop_P_RTP.bin",
     "/vendor/firmware/0_click_P_RTP.bin",
-    "/vendor/firmware/1_doubelClick_P_RTP.bin",
-    "/vendor/firmware/2_tick_P_RTP.bin",
+    "/vendor/firmware/3_thud_P_RTP.bin",
     "/vendor/firmware/3_thud_P_RTP.bin",
     "/vendor/firmware/4_pop_P_RTP.bin",
-    "/vendor/firmware/5_heavyClick_P_RTP.bin",
+    "/vendor/firmware/4_pop_P_RTP.bin",
 };
 
 // Function to parse custom fifo data from vendor
