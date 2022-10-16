@@ -248,3 +248,6 @@ CONFIG_IEEE80211AX := true
 
 # Inherit proprietary blobs
 include vendor/xiaomi/sm8350-common/BoardConfigVendor.mk
+
+# Inherit MIUI Camera
+include vendor/lisa-miuicamera/products/board.mk
