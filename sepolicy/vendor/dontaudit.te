@@ -1,5 +1,6 @@
 dontaudit untrusted_app ashmem_device:chr_file open;
 
 dontaudit {
+  hal_camera_default
   rild
 } default_prop:file r_file_perms;
