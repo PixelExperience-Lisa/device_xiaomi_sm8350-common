@@ -178,7 +178,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     hardware/qcom-caf/sm8350/display/config/snapdragon_color_libs_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/snapdragon_color_libs_config.xml
 
-TARGET_GRALLOC_HANDLE_HAS_RESERVED_SIZE := false
+TARGET_GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE := true
 
 # DRM
 PRODUCT_PACKAGES += \
