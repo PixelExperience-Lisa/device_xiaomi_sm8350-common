@@ -155,7 +155,7 @@ echo 0 > /proc/sys/kernel/sched_coloc_busy_hysteresis_enable_cpus
 echo "schedutil" > /sys/devices/system/cpu/cpufreq/policy0/scaling_governor
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/down_rate_limit_us
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/up_rate_limit_us
-echo 1324800 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
+echo 1152000 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/hispeed_freq
 echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/schedutil/pl
 
