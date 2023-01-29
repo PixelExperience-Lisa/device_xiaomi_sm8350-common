@@ -1,4 +1,7 @@
 allow platform_app vendor_sys_video_prop:file { read };
 
+# Audio
+get_prop(platform_app, audio_config_prop);
+
 # Face Unlock
 get_prop(platform_app, vendor_camera_prop)
