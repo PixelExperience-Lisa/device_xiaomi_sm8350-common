@@ -114,6 +114,9 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.-->
         <!-- Config to enable the example android location attribution app by default -->
         <string name="gps.nfw_proxy_apps">com.example.android.locationattribution</string>
         <boolean name="carrier_cross_sim_ims_available_bool" value="true" />
+        <!-- Allow VoLTE and WFC by default -->
+        <boolean name="carrier_volte_available_bool" value="true" />
+        <boolean name="carrier_wfc_ims_available_bool" value="true" />
     </carrier_config>
 
     <carrier_config mcc="001" mnc="01">
