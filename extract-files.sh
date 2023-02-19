@@ -71,11 +71,6 @@ function blob_fixup() {
         |vendor/etc/camera/pureView_parameter.xml)
             sed -i 's/=\([0-9]\+\)>/="\1">/g' "${2}"
             ;;
-        vendor/etc/media_lahaina/video_system_specs.json \
-        |vendor/etc/media_shima_v1/video_system_specs.json \
-        |vendor/etc/media_yupik_v1/video_system_specs.json)
-            sed -i "/max_retry_alloc_output_timeout/ s/10000/0/" "${2}"
-            ;;
         vendor/lib64/android.hardware.secure_element@1.0-impl.so)
             "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
             ;;
