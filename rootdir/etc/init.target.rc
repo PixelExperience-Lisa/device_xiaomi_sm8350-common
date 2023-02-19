@@ -254,6 +254,9 @@ service displaycount /vendor/bin/displaycount
 on property:sys.boot_completed=1
     start displaycount
 
+# Enable UFS powersaving
+    write /sys/devices/platform/soc/1d84000.ufshc/clkgate_enable 1
+
 on property:sys.lmkd.memory.compact=1
     setprop sys.lmkd.memory.compact 0
     write /proc/sys/vm/reclaim_pages ${sys.lmkd.memory.reclaim_pages}
