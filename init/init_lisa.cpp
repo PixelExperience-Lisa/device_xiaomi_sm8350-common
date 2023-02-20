@@ -75,13 +75,6 @@ void set_device_props(const string model, const string name, const string market
     }
 }
 
-void load_miuicamera_properties() {
-    property_override("ro.product.mod_device", "lisa_global");
-    property_override("persist.vendor.camera.privapp.list", "com.android.camera");
-    property_override("ro.com.google.lens.oem_camera_package", "com.android.camera");
-    property_override("ro.miui.notch", "1");
-}
-
 void vendor_load_properties()
 {
     // Detect device and configure properties
@@ -95,8 +88,6 @@ void vendor_load_properties()
         set_device_props("2109119DG", "lisa_global", "Xiaomi 11 Lite 5G NE");
     }
 
-    load_miuicamera_properties();
-    
     // Set hardware revision
     property_override("ro.boot.hardware.revision", GetProperty("ro.boot.hwversion", "").c_str());
 }
