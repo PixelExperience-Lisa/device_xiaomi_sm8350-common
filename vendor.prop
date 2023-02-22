@@ -165,7 +165,6 @@ debug.sf.set_idle_timer_ms=3000
 debug.sf.latch_unsignaled=0
 persist.sys.sf.color_mode=9
 persist.sys.sf.color_saturation=1.0
-ro.config.avoid_gfx_accel=true
 debug.sf.predict_hwc_composition_strategy=0
 persist.sys.sf.native_mode=2
 ro.hardware.egl=adreno
