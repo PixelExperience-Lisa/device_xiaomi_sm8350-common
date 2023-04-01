@@ -1,6 +1,3 @@
-# App
-ro.launcher.blur.appLaunch=0
-
 # Bluetooth
 persist.vendor.btstack.enable.lpa=true
 vendor.bluetooth.soc=hastings
